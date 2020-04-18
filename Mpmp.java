@@ -2,7 +2,7 @@ public class Mpmp {
 
 	/*
 	 * Dear Matt Parker, Unless I'm very mistaken, the solution to you card game
-	 * puzzle for N cards would be (N^2)-1. Given that we don't know the starting
+	 * puzzle for N cards would be (2^N)-1. Given that we don't know the starting
 	 * positions and we only know how many cards there are until we win, the
 	 * strategy is to go through all possible combinations without repeating the
 	 * same combination twice.
