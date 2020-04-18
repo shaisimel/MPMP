@@ -148,8 +148,7 @@ public class Mpmp {
 
 	// The Integer.toBinaryString method cuts off the leading zeros. A cool trick to
 	// print them is to OR the number to print with one that has all zeros but have
-	// the
-	// bit at the front set to 1, and then cut off the leading bit.
+	// the bit at the front set to 1, and then cut off the leading bit.
 	static final int ZERO_PADDING = (1 << NUMBER_OF_CARDS);
 
 	public static void printPositions(int pos) {
