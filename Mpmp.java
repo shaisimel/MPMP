@@ -86,12 +86,12 @@ public class Mpmp {
 	 */
 
 	static final int NUMBER_OF_CARDS = 4; // Solve for size n. Since we are using int which has 32 bits, you can only
-											// set this up to 32 (or 31 if you also print the steps.) It will take very
-											// long to run though
+					      // set this up to 32 (or 31 if you also print the steps.) It will take very
+					      // long to run though
 	static final int TARGET_POSITION = (int) (Math.pow(2, NUMBER_OF_CARDS) - 1); // The target is to get all the bits
 																					// set as 1, that would be (2^n) - 1
 	static final boolean PRINT_STEPS = true; // If you don't want to print the steps, set this to false, this will make
-												// the program run faster
+						 // the program run faster
 
 	// Since we are using a recursion to solve the riddle, it's easier to track how
 	// many steps we went through and the current position with a global variable
@@ -108,7 +108,7 @@ public class Mpmp {
 		// position
 		for (int startingPostion = 1; startingPostion < TARGET_POSITION; startingPostion++) {
 			System.out.println("Game: " + startingPostion); // The starting position is actually the number of game we
-															// are currently playing, neat :)
+									// are currently playing, neat :)
 			currentPostion = startingPostion; // Setting the global parameter
 			stepPrintCounter = 0; // Resetting the counter for print
 			printPositions(currentPostion);
@@ -125,15 +125,15 @@ public class Mpmp {
 		int stepTaken = 0;
 		if (index > 0) {
 			stepTaken = flipBits(index - 1); // Before flipping the bit at the index position, lets try first flipping
-												// the ones to the right of it.
+							 // the ones to the right of it.
 		}
 		if (!isInWinningPosition()) {
 			currentPostion ^= (1 << index); // Flip the bit in position index (by XORing the current number with a
-											// number that has only the bit at position index set to 1)
+							// number that has only the bit at position index set to 1)
 			stepTaken++;
 			printPositions(currentPostion);
 			if (!isInWinningPosition() && index > 0) { // If we still didn't win after flipping the bit at position
-														// index, lets try flipping the bits to the right again
+								   // index, lets try flipping the bits to the right again
 				stepTaken += flipBits(index - 1);
 			}
 		}
